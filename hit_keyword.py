@@ -48,16 +48,3 @@ summary_df = pd.DataFrame(summary).sort_values(by="lift", ascending=False)
 # Save to CSV
 output_path = "keyword_analysis_summary.csv"
 summary_df.to_csv(output_path, index=False)
-
-# Define simple ASCII-based heuristic
-def is_mostly_english(text):
-    return bool(re.fullmatch(r"[A-Za-z0-9\s\-']+", text))
-
-# Filter using the heuristic
-filtered_df = summary_df[summary_df["keyword"].apply(is_mostly_english)]
-
-# Save the cleaned result
-cleaned_ascii_path = "keyword_analysis_summary_cleaned.csv"
-filtered_df.to_csv(cleaned_ascii_path, index=False)
-
-cleaned_ascii_path
