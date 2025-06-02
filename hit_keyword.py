@@ -48,3 +48,19 @@ summary_df = pd.DataFrame(summary).sort_values(by="lift", ascending=False)
 # Save to CSV
 output_path = "keyword_analysis_summary.csv"
 summary_df.to_csv(output_path, index=False)
+
+# Load the reuploaded cleaned keyword summary file
+file_path1 = "keyword_analysis_summary_cleaned.csv"
+summary_df1 = pd.read_csv(file_path1)
+
+# Filter keywords that appeared in at least 1 hit movie
+filtered_keywords = summary_df1[summary_df1["hit_count"] > 0]
+
+# Sort by hit_ratio descending and select top 20
+top_keywords = filtered_keywords.sort_values(by="hit_ratio", ascending=False).head(20)
+
+# Save to new CSV
+top_keywords_path = "top_20_hit_keywords.csv"
+top_keywords.to_csv(top_keywords_path, index=False)
+
+top_keywords_path
