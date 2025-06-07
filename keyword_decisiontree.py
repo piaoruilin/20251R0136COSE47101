@@ -13,7 +13,7 @@ import ast
 df = pd.read_csv("자료폴더/top-10_with_genres_keywords.csv")
 
 # Load cleaned keyword list
-clean_keywords_df = pd.read_csv("keyword_analysis_summary_cleaned.csv")
+clean_keywords_df = pd.read_csv("keyword_files/keyword_analysis_summary_cleaned.csv")
 clean_keywords_set = set(clean_keywords_df["keyword"].str.lower())
 
 # Preprocess keywords: filter out non-English ones
