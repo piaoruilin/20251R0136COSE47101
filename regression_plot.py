@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 import ast
 
 df = pd.read_csv("자료폴더/top-10_with_genres_keywords.csv")
-summary_df = pd.read_csv("keyword_analysis_summary_cleaned.csv")
+summary_df = pd.read_csv("keyword_files/keyword_analysis_summary_cleaned.csv")
 
 # Create cleaned keyword set
 clean_keywords_set = set(summary_df["keyword"].str.lower())

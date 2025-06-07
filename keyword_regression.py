@@ -44,7 +44,7 @@ top_negative = feature_names[np.argsort(coefs)[:10]]
 print(top_positive, top_negative, report, conf_matrix)
 
 # Load the reuploaded cleaned keyword summary file
-file_path1 = "keyword_analysis_summary_cleaned.csv"
+file_path1 = "keyword_files/keyword_analysis_summary_cleaned.csv"
 summary_df1 = pd.read_csv(file_path1)
 
 # Filter keywords that appeared in at least 1 hit movie
@@ -68,7 +68,7 @@ plt.tight_layout()
 plt.show()
 
 # Reload the cleaned keyword summary CSV
-summary_df = pd.read_csv("keyword_analysis_summary_cleaned.csv")
+summary_df = pd.read_csv("keyword_files/keyword_analysis_summary_cleaned.csv")
 
 # Filter to remove infinite lift and require at least 1 hit and 1 non-hit occurrence
 filtered_for_lift = summary_df[

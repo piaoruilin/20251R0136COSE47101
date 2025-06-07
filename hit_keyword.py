@@ -50,7 +50,7 @@ output_path = "keyword_analysis_summary.csv"
 summary_df.to_csv(output_path, index=False)
 
 # Load the reuploaded cleaned keyword summary file
-file_path1 = "keyword_analysis_summary_cleaned.csv"
+file_path1 = "keyword_files/keyword_analysis_summary_cleaned.csv"
 summary_df1 = pd.read_csv(file_path1)
 
 # Filter keywords that appeared in at least 1 hit movie
