@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 
-# ✅ 한글 폰트 설정 (Windows용: 맑은 고딕)
+# 한글 폰트 설정 (Windows용: 맑은 고딕)
 matplotlib.rc('font', family='Malgun Gothic')
 plt.rcParams['axes.unicode_minus'] = False
 
@@ -34,5 +34,5 @@ plt.legend(title="장르")
 plt.grid(True)
 plt.tight_layout()
 
-# ✅ 이미지 저장
+# 이미지 저장
 plt.savefig("장르트렌드_그래프.png", dpi=300, bbox_inches='tight')
