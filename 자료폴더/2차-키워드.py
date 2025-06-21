@@ -4,7 +4,6 @@ import ast
 
 # 데이터 로드
 df = pd.read_csv("top-10_with_genres_keywords.csv")
-
 # 키워드 파싱: 문자열을 리스트로 변환
 df['keywords'] = df['keywords'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else [])
 
